@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    background-image: url('/images/cat-violence.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.centered {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    margin-top: 25vh;
+    font-size: 10vw;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links a {
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin: 0 60px;
+    margin-top: 8vh;
+}
+
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 8vw;
+        margin-top: 15vh;
+    }
+
+    .links a {
+        font-size: 25px;
+        margin: 0 30px;
+        margin-top: 6vh;
+    }
+}
+
+/* Media query for screens smaller than 450px */
+@media (max-width: 450px) {
+    h1 {
+        font-size: 6vw;
+        margin-top: 20vh;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .links a {
+        font-size: 20px;
+        margin: 10px 0;
+        margin-top: 4vh;
+    }
+}

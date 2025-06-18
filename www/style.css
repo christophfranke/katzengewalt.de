@@ -6,13 +6,15 @@ body {
     background-position: center;
     background-attachment: fixed;
     margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    min-width: 320px;
 /*    height: 100vh;
     overflow: hidden;
 */}
 
 .centered {
     width: 100vw;
-/*    height: 100vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +24,11 @@ body {
 }
 
 h1 {
-    color: white;
-    margin-top: 12vh;
+    margin: 0;
+}
+
+.title {
+    margin-top: 6vh;
     font-size: 10vw;
     font-weight: bold;
     font-family: sans-serif;
@@ -42,11 +47,15 @@ h1 {
     color: white;
     display: block;
     margin: 0 60px;
-    margin-top: 8vh;
+    margin-top: 4vh;
 }
 
 .links a:hover {
     text-decoration: none;
+}
+
+.player {
+    margin-top: 4vh;
 }
 
 .player iframe {
@@ -54,14 +63,24 @@ h1 {
     max-width: 400px;
     min-height: 208px;
     border: 0;
+    min-width: 300px;
+}
+
+.form {
+    margin-top: 40px;
+    width: 400px;
+}
+
+.form #mlb2-27362282.ml-form-embedContainer .ml-form-embedWrapper {
+    background-color: rgba(246, 246, 246, 0.2);
 }
 
 
 /* Media query for screens smaller than 800px */
-@media (max-width: 800px) {
-    h1 {
+@media (max-width: 1030px) {
+    .title {
         font-size: 8vw;
-        margin-top: 10vh;
+        margin-top: 6vh;
     }
 
     .links a {
@@ -71,12 +90,21 @@ h1 {
     }
 }
 
+@media (max-width: 700px) {
+    .links a {
+        font-size: 6vw;
+    }
+}
+
 /* Media query for screens smaller than 450px */
 @media (max-width: 450px) {
-    h1 {
-        font-size: 12vw;
+    .title {
+        font-size: 50px;
         margin-top: 0;
-        margin-bottom: 15vh;
+    }
+
+    .player {
+        margin-top: 4vh;
     }
 
     .links {
@@ -87,5 +115,10 @@ h1 {
         font-size: 20px;
         margin: 10px 0;
         margin-top: 2vh;
+    }
+
+    .form {
+        width: 90vw;
+        min-width: 300px;
     }
 }
